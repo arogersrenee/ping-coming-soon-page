@@ -65,5 +65,130 @@ table {
     --clr-social-border: hsla(223, 87%, 63%, 0.15);
     --clr-white: #ffffff;
     --clr-error: #FF5466;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
 }
 
+body {
+    padding: 5rem 1.5rem 2rem;
+    text-align: center;
+    font-family: var(--ff-primary);
+    font-size: 0.75rem;
+}
+
+.logo {
+    width: 4rem;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 1.375rem;
+    color: var(--clr-gray);
+    font-weight: var(--fw-light);
+    margin-bottom: 1rem;
+}
+
+.bold {
+    font-weight: var(--fw-bold);
+    color: var(--clr-dark);
+}
+
+.subscribe {
+    color: var(--clr-dark);
+}
+
+.hero-section {
+    margin-bottom: 2rem;
+}
+
+.product-img {
+    width: 100%;
+    margin: 5rem 0 8rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+input {
+    width: 100%;
+    border-radius: 10rem;
+    padding: 0.75rem;
+}
+
+input[type="email"] {
+    border: 1px solid var(--clr-light);
+}
+
+input[type="email"]::placeholder {
+    color: var(--clr-input);
+}
+
+.error-msg {
+    color: var(--clr-error);
+    font-size: 0.625rem;
+    font-style: italic;
+    font-weight: var(--fw-regular);
+    /* padding-left: 0.75rem; */
+}
+
+.no-error {
+    /* display: none; */
+}
+
+/* .email-row {
+    text-align: left;
+} */
+
+input[type="submit"] {
+    border: none;
+    background-color: var(--clr-accent);
+    color: var(--clr-white);
+    font-weight: var(--fw-bold);
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.fa-brands {
+    color: var(--clr-accent);
+}
+
+i {
+    border: 1px solid var(--clr-social-border);
+    width: 0.75rem;
+    height: 0.75rem;
+    padding: 0.5rem;
+    border-radius: 100%;
+    box-sizing: initial;
+    
+}
+
+footer {
+    color: var(--clr-gray);
+    font-size: 0.625rem;
+}
+
+@media screen and (min-width: 70rem) {
+
+    .wrapper {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        gap: 0.75rem;
+    }
+
+}
