@@ -142,7 +142,7 @@ input[type="email"]:focus {
     gap: 0.5rem;
 }
 
-.error-msg {
+#error-msg {
     color: var(--clr-error);
     font-size: 0.625rem;
     font-style: italic;
@@ -157,7 +157,7 @@ input[type="submit"] {
     border: none;
     background-color: var(--clr-accent);
     color: var(--clr-white);
-    font-weight: var(--fw-bold);
+    font-weight: var(--fw-semibold);
     box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.23);
 }
 
@@ -187,8 +187,7 @@ i {
     height: 0.75rem;
     padding: 0.5rem;
     border-radius: 100%;
-    box-sizing: initial;
-    
+    box-sizing: initial;  
 }
 
 i:hover {
@@ -228,8 +227,9 @@ footer {
         padding-right: 4rem;
     }
 
-    .error-msg {
+    #error-msg {
         padding-left: 0.75rem;
+        font-size: 0.75rem;
     }
 
     .logo {
