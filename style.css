@@ -119,6 +119,7 @@ input {
     width: 100%;
     border-radius: 10rem;
     padding: 0.75rem;
+    font-family: var(--ff-primary);
 }
 
 input[type="email"] {
@@ -127,6 +128,18 @@ input[type="email"] {
 
 input[type="email"]::placeholder {
     color: var(--clr-input);
+    font-family: var(--ff-primary);
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border: 1px solid var(--clr-accent);
+}
+
+.email-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .error-msg {
@@ -134,22 +147,23 @@ input[type="email"]::placeholder {
     font-size: 0.625rem;
     font-style: italic;
     font-weight: var(--fw-regular);
-    /* padding-left: 0.75rem; */
 }
 
 .no-error {
-    /* display: none; */
+    display: none;
 }
-
-/* .email-row {
-    text-align: left;
-} */
 
 input[type="submit"] {
     border: none;
     background-color: var(--clr-accent);
     color: var(--clr-white);
     font-weight: var(--fw-bold);
+    box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.23);
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 2px rgba(76, 123, 243, 0.23), inset 0 0 0 10rem hsla(0, 0%, 100%, 0.2);
 }
 
 .social-icons {
@@ -157,6 +171,10 @@ input[type="submit"] {
     gap: 0.75rem;
     justify-content: center;
     margin-bottom: 1.5rem;
+}
+
+.social-icons > a:hover {
+    cursor: pointer;
 }
 
 .fa-brands {
@@ -173,9 +191,18 @@ i {
     
 }
 
+i:hover {
+    background-color: var(--clr-accent);
+    border: none;
+}
+
 footer {
     color: var(--clr-gray);
     font-size: 0.625rem;
+}
+
+.fa-brands:hover {
+    color: var(--clr-white);
 }
 
 @media screen and (min-width: 70rem) {
@@ -191,4 +218,31 @@ footer {
         gap: 0.75rem;
     }
 
+    .email-row {
+        flex-grow: 1;
+        text-align: left;
+    }
+
+    input[type="submit"] {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .error-msg {
+        padding-left: 0.75rem;
+    }
+
+    .logo {
+        width: 7rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .subscribe {
+        font-size: 1.25rem;
+    }
 }
